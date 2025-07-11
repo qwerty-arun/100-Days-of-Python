@@ -37,6 +37,12 @@ strong_brew = ["black tea", "water"] * 3
 print(f"Strong Brew: {strong_brew}")
 
 # Bytearray
+#bytearray is a mutable sequence of integers in the range of 0 to 255, representing byte values. It is a built-in type that allows for efficient manipulation of binary data. 
 raw_spice_data = bytearray(b"CINNAMON")
 raw_spice_data = raw_spice_data.replace(b"CINNA", b"CARD")
 print(f"Bytes: {raw_spice_data}")
+
+my_bytearray = bytearray(5) # Creates a bytearray of 5 null bytes: bytearray(b'\x00\x00\x00\x00\x00')
+print(my_bytearray)
+my_bytearray = bytearray([65, 66, 67]) # Creates bytearray(b'ABC')
+print(my_bytearray)

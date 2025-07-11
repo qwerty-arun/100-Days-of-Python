@@ -15,4 +15,3 @@ print(f"Ratios G: {ginger_ratio}, C: {cardamom_ratio}")
 
 print(f"Is ginger in masala spices ? {'ginger' in masala_spices}")
 print(f"Is ginger in masala spices ? {'cinnamom' in masala_spices}")
-print(f"Is ginger in masala spices ? {'Cinnamom' in masala_spices}")
