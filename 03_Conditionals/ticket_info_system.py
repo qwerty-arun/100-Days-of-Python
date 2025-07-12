@@ -7,8 +7,8 @@ match seat_type:
     case "ac":
         print("AC - Air Conditioned, comfy ride")
     case "general":
-        print("General: cheapest, no reservation")
+        print("General: Cheapest, no reservation")
     case "luxury":
-        print("Luxury - premium seats with meals")
+        print("Luxury - Premium seats with meals")
     case _:
         print("Invalid seat type")    
