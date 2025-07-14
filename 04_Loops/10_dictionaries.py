@@ -6,6 +6,7 @@ users = [
     {"id": 3, "total": 18, "coupon": "P50"}
 ]
 
+# discount in %, flat off
 discounts = {
     "P20": (0.2, 0),
     "F10": (0.5, 0),
@@ -13,6 +14,6 @@ discounts = {
 }
 
 for user in users:
-    percent, fixed = discounts.get(user["coupon"], (0, 0))
+    percent, fixed = discounts.get(user["coupon"], (0, 0)) # (0,0) is the default value
     discount = user["total"] * percent + fixed
     print(f"{user["id"]} paid {user["total"]} and got discount: {discount}")
