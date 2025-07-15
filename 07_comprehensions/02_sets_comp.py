@@ -15,5 +15,6 @@ recipes = {
 }
 
 unique_spices = {spice for ingredients in recipes.values() for spice in ingredients}
+# note that 'spice' is used as expression and not 'ingredients', the final variable used as iterator is used as an expression
 
 print(unique_spices)
