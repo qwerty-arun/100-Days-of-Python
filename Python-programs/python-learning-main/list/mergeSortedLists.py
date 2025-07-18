@@ -3,6 +3,9 @@ b = [3,4,8]
 c = []
 
 c = a + b
+d = a + b
+d.sort()
+print(d)
 
 for i in range(0, len(c)):
 	min = i

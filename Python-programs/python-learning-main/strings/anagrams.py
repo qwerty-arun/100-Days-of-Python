@@ -3,7 +3,9 @@ def anagram(a, b):
 		return False
 	
 	a_list = a.split()
+	print(a_list)
 	b_list = b.split()
+	print(b_list)
 	
 	for i in range(0, len(a)):
 		if b.find(a[i]) == -1:

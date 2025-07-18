@@ -6,4 +6,7 @@ for i in range(len(a)-k,len(a)):
 
 for i in range(0, len(a)-k):
 	rotated.append(a[i])
+
+print(a)
 print(rotated)
+
