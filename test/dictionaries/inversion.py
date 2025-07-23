@@ -1,0 +1,1 @@
+# Invert a dictionary: swap keys and values

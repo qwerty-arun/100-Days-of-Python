@@ -1,0 +1,1 @@
+# Create a generator that yields infinite prime numbers (use 'yield` and a loop)

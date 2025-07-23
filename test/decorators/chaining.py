@@ -1,0 +1,1 @@
+# Chain multiple decorators: logging, timing, caching on the same function

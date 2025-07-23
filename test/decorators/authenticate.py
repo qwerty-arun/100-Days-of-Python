@@ -1,0 +1,1 @@
+# Write a decorator that checks if the user is authenticated before running the function (simulate)

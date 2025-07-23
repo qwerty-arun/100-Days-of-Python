@@ -1,0 +1,1 @@
+# Create a dictionary that maps each lowercase letter to its ASCII code

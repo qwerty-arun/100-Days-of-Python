@@ -1,0 +1,1 @@
+# Given a list of strings, return a dictionary where key = word, value = length

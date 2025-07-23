@@ -1,0 +1,1 @@
+# Build a mul table as a dictionary with tuple keys: {(2,3): 6}
