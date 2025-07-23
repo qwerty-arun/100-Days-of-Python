@@ -29,4 +29,6 @@ chai_recipe.update(extra_spices)
 print(f"Updated chai recipe: {chai_recipe}")
 
 customer_note = chai_order.get("type", "NO note") # try any other than "type", it will print NO note
+chai_type = chai_order.get("cost", "Hell no")
 print(f"Customer note: {customer_note}")
+print(f"Chai type: {chai_type}")

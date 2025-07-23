@@ -1,5 +1,6 @@
 # Using Dictionaries instead of repeated case
 
+# This is a list of dictionaries
 users = [
     {"id": 1, "total": 100, "coupon": "P20"},
     {"id": 2, "total": 150, "coupon": "F10"},

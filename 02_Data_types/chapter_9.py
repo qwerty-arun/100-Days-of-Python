@@ -26,3 +26,4 @@ print(my_frozenset)  # Output: frozenset({1, 2, 3, 4})
 my_string = "hello"
 another_frozenset = frozenset(my_string)
 print(another_frozenset)  # Output: frozenset({'o', 'e', 'l', 'h'})
+# actually, it prints in any order

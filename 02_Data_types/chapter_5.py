@@ -11,6 +11,8 @@ print(f"Ideal Temp {ideal_temp}")
 print(f"Current Temp {current_temp}")
 print(f"Difference Temp {ideal_temp - current_temp}")
 print(sys.float_info)
+print(sys.int_info)
+print(sys.thread_info)
 
 # complex numbers
 z1 = complex(3, 4)  # Creates 3 + 4j
