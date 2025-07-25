@@ -18,3 +18,6 @@ unique_spices = {spice for ingredients in recipes.values() for spice in ingredie
 # note that 'spice' is used as expression and not 'ingredients', the final variable used as iterator is used as an expression
 
 print(unique_spices)
+
+print(set([1,2,2,3,3,3,4]))
+print(set("Arunnnn"))

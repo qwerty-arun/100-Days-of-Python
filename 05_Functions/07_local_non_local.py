@@ -1,11 +1,12 @@
 # Local and Non-local
 
-chai_type = "ginger"
+chai_type = "Ginger"
 def update_order():
     chai_type = "Elaichi"
 
     def kitchen():
         nonlocal chai_type # use global to change the global chai_type
+        print("Before Update: ", chai_type)
         chai_type = "Kesar"
 
     kitchen()

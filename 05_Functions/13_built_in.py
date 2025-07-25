@@ -7,6 +7,7 @@ print(chai_flavour.__name__)
 
 help(len)
 help(zip)
+help(help)
 
 def generate_bill(chai = 0, samosa = 0):
     """

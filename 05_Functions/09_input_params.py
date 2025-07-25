@@ -3,6 +3,7 @@ chai = [1, 2, 3]
 def edit_chai(cup):
     cup[1] = 42
 
+print(chai)
 edit_chai(chai)
 print(chai)
 
@@ -13,8 +14,8 @@ make_chai("darjeeling", "yes", "low") #positional
 make_chai(tea="green", sugar="medium", milk= "no") # keywords
 
 def special_chai(*ingrediants, **extras):
-    print("Ingrediants", ingrediants)
-    print("Extras", extras)
+    print("Ingredients: ", ingrediants)
+    print("Extras: ", extras)
 
 special_chai("Cinnamon", "Cardamom", sweetener="Honey", foam = "yes") #tuple and a dictionary
 
@@ -27,5 +28,4 @@ def chai_order(order = None):
         order = []
     print(order)
 
-chai_order()
 chai_order()
