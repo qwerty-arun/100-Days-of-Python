@@ -6,4 +6,8 @@ def reverseString(str):
         reversed = char + reversed
     return reversed
 
+def reversed(str):
+    return str[::-1]
+
 print(reverseString("car"))
+print(reversed("computer"))

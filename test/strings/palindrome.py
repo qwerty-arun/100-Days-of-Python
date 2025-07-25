@@ -14,8 +14,7 @@ def palindrome(str):
     return True
 
 def optimized(str):
-    rev = str[::-1]
-    return str == rev
+    return str == str[::-1] 
 
 print(palindrome("racecar"))
 print(palindrome("race"))
