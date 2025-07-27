@@ -19,6 +19,7 @@ from functools import wraps
 
 def cache_results(func):
     cache = {}
+    @wraps(func)
     def wrapper(*args):
         if args in cache:
             return f"From Cache: {cache[args]}"
@@ -31,3 +32,5 @@ def cache_results(func):
 @cache_results
 def multiply(a: int, b: int) -> int:
     return a * b
+
+print(multiply(4, 5))
