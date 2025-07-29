@@ -1,24 +1,36 @@
-# interact with user -> input
-# personalised self-intro
+import textwrap
 
-import datetime
+name = input("Enter your name: ").strip()
+profession = input("Enter your profession: ").strip()
+passion = input("Enter your passion in one line: ").strip()
+emoji = input("Enter your favourite emoji: ").strip()
+website = input("Enter your website: ").strip()
 
-name = input("Name: ").strip()
-age = input("Age: ").strip()
-city = input("Where do you live(city)?: ").strip()
-profession = input("What is your profession?: ").strip()
-hobby = input("What is your favorite hobby?: ")
+print("\nChoose your style: ")
+print("1. Simple lines")
+print("2. Vertical flair")
+print("3. Emoji sandwich")
 
-intro_message = (
-    f"Hello! My name is {name}, I'm {age} years old and live in {city}.\n"
-    f"I work as a {profession} and I absolutely enjoy {hobby}.\n"
-    f"Nice to meet you!\n"
-)
+style = input("Enter 1, 2 or 3: ").strip()
 
-current_date = datetime.date.today().isoformat()
-intro_message += f"\n Logged on: {current_date}"
+def generate_bio(style):
+    if style == "1":
+        return f"{emoji} {name} | {profession} \n💡{passion}\n {website}" 
+    elif style == "2":
+        return f"{emoji} {name}\n{profession}🔥\n{passion}\n{website}🔥"
+    elif style =="3":
+        return f"{emoji*3}\n{name} - {profession}\n {passion}\n{website}\n{emoji}"
 
-border = '*' * 60
-final_output = f"{border}\n{intro_message}\n{border}"
+bio = generate_bio(style)
 
-print(final_output)
+print("\nYour stylish bio:\n")
+print("*" * 50)
+print(textwrap.dedent(bio))
+print("*" * 50)
+
+save = input("Do you want to save this bio to a text file? (y/n): ").lower()
+if save == 'y':
+    filename = f"{name.lower().replace(' ', '_')}_bio.txt"
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(bio)
+    print("file saved")
