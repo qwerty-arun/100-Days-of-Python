@@ -1,24 +1,19 @@
-# emoji enhancer: take a sentence, add emoji after keywords
+# terminal based task list manager
 
-# get a dictionary
-emoji_map_fun ={
-    "love": "💖",
-    "happy": "😊",
-    "code": "💻",
-}
-# get user message
-message = input("Enter your message: ")
+import os
+TASK_FILE = "tasks.txt"
 
+def load_tasks():
+    tasks = []
+    if(os.path.exists(TASK_FILE)):
+        with open(TASK_FILE, 'r', encoding="utf-8") as f:
+            for line in f:
+                text, status = line.strip().rsplit("||", 1) # 1 gives 2 divided parts 
+                tasks.append({"text": text, "done": status == "done"})
+    return tasks
 
-updated_words = []
-# process each word
-for word in message.split():
-    cleaned = word.lower().strip(".,!?")
-    emoji = emoji_map_fun.get(cleaned, "")
-    if emoji:
-        updated_words.append(f"{emoji}")
-    else:
-        updated_words.append(word)
-
-updated_message = " ".join(updated_words)
-print(updated_message)
+def save_tasks(tasks):
+    with open(TASK_FILE, "w", encoding="utf-8") as f:
+        for task in tasks:
+            status = "done" if task["done"] else "not_done"
+            f.write(f"{task["text"]}||{status}\n")
