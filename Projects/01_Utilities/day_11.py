@@ -34,7 +34,13 @@ def run_friendship_calculator():
 
     score = friendship_score(name1, name2)
 
-    print(f"\n {score}")
+    print(f"\n Score: {score}%")
+    if score > 80:
+        print("You are like chai and samosa, made for each other!")
+    elif 50 <= score <=80:
+        print("You are like warm spices!")
+    else:
+        print("You are chai and your friend is coffee. Can't get along together well..")
 
 
 run_friendship_calculator()
