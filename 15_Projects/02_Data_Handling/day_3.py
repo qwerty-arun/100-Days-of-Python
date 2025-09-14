@@ -37,6 +37,16 @@ def save_movies(movies):
     with open(FILENAME, "w", encoding="utf-8") as f:
         json.dump(movies, f, indent=2)
 
+# Structure
+# [
+#     {
+#         "title": "movie_name",
+#         "genre": "movie_genre",
+#         "rating": "movie_rating"
+#     },
+#     {},
+#     {}
+# ]
 
 def add_movies(movies):
     title = input("Enter the movie name: ").strip().lower()
