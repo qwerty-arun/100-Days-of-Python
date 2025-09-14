@@ -1,0 +1,12 @@
+[
+  {
+    "title": "interstellar",
+    "genre": "sci-fi",
+    "rating": 10.0
+  },
+  {
+    "title": "inception",
+    "genre": "thriller",
+    "rating": 10.0
+  }
+]
