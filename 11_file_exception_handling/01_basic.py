@@ -2,9 +2,12 @@
 '''
 IndexError
 KeyError
+ValueError
 ZeroDivisionError
 TypeError
 NameError
+ModuleNotFoundError
+AttributeError
 '''
 orders = ["masala", "ginger"]
 dic = {"key":"1", "value":"2"}
