@@ -1,0 +1,5 @@
+How it works:
+Opens the source file in read mode.
+Reads all its content.
+Opens the destination file in write mode (creates it if it doesn’t exist).
+Writes the content into the destination file.
