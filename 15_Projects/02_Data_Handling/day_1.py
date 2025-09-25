@@ -33,7 +33,7 @@ import os
 
 FILENAME = "contacts.csv"
 
-if not os.path.exists(FILENAME):
+if not os.path.exists(FILENAME) or os.stat(FILENAME).st_size == 0:
     with open(FILENAME, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["Name", "Phone", "Email"])
@@ -51,7 +51,7 @@ def add_contact():
                print("Contact name already exists")
                return
     
-    with open(FILENAME, 'a', encoding="utf-8") as f:
+    with open(FILENAME, 'a', newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow([name, phone, email])
         print("Contact added")
@@ -59,17 +59,19 @@ def add_contact():
 
 def view_contacts():
     with open(FILENAME, 'r', encoding="utf-8") as f:
-        reader = csv.reader(f)
+        reader = csv.DictReader(f)
         rows = list(reader)
 
-        if len(rows) <= 1:
+        if not rows:
             print("No contacts found")
             return
-        
-        print("\n Your contacts: \n")
 
-        for row in rows[1:]:
-            print(f"{row[0]} | {row[1]} | {row[2]}")
+        print("\n Your contacts: \n")
+        for row in rows:
+            # Skip incomplete rows
+            if not row.get("Name") or not row.get("Phone") or not row.get("Email"):
+                continue
+            print(f"{row['Name']} | 📞 {row['Phone']} | 📧 {row['Email']}")
         print()
 
 def search_contact():
@@ -79,8 +81,8 @@ def search_contact():
     with open(FILENAME, 'r', encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            if term in row["Name"].lower():
-                print(f"{row["Name"]} | 📞 {row["Phone"]}")
+            if term in row["Name"].lower() and term in row["Name"].lower():
+                print(f'{row["Name"]} | 📞 {row["Phone"]} | 📧 {row["Email"]}')
                 found = True
 
     if not found:
