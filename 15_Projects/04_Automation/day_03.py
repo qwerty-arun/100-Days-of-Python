@@ -18,7 +18,7 @@ import shutil
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
-WATCH_FOLDER = os.path.expanduser("~/Downloads")
+WATCH_FOLDER = os.path.expanduser("D:/100-Days-of-Python/15_Projects/04_Automation")
 
 FILE_DESTS = {
     '.pdf': 'PDFs',
