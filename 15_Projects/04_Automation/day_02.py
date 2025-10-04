@@ -26,7 +26,7 @@ def batch_rename(folder, base_name, extension):
     for i, file in enumerate(files, start=1):
         new_name = f"{base_name}_{i}{extension}"
         print(f"{file} => {new_name}")
-    confirm = input("Press (y) to confirm or (n) to reject").strip().lower()
+    confirm = input("Press (y) to confirm or (n) to reject: ").strip().lower()
 
     if confirm != 'y':
         print("Cancel")
