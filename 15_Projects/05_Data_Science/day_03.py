@@ -13,8 +13,8 @@ model.fit(X, y)
 
 data["PredictedSalary"] = model.predict(X)
 
-print("Model Coefficient (slope)", round(float(model.coef_[0]), 2))
-print("Model INtercept (base salary)", round(float(model.intercept_), 2))
+print("Model Coefficient (slope)", model.coef_[0])
+print("Model Intercept (base salary)", model.intercept_)
 
 plt.scatter(X, y, color="blue", label="Actual Data")
 plt.plot(X, data["PredictedSalary"], color="red", label="Regression line")
